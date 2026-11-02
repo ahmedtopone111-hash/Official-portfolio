@@ -1,0 +1,638 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>Leo-website</title>
+    <style>
+      /*******basics******/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --card: #222240;
+        --mainText: #f4f3ff;
+        --text: #aaa9c5;
+        --special: #8b5cf6;
+        --bg: #17172f;
+        --addtional: #000;
+      }
+
+      body {
+        font-size: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+
+      section {
+        padding: 100px 120px;
+      }
+      .About {
+        min-height: 100vh;
+      }
+      .Skills {
+        min-height: 100vh;
+      }
+      /**********basics end **********/
+
+      /************nav & header*************/
+      header {
+        background-color: var(--card);
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 200px;
+      }
+
+      .logo {
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--special);
+      }
+
+      .navigation ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      .navigation ul a {
+        text-decoration: none;
+        color: var(--mainText);
+        font-size: 1.3rem;
+        font-weight: 500;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        padding: 3px 6px;
+        transition: 0.3s ease;
+      }
+
+      .navigation ul a:hover {
+        color: var(--special);
+        border: 2px solid var(--text);
+      }
+
+      .theme {
+        background: transparent;
+        border: 2px solid transparent;
+        font-size: 2rem;
+        color: var(--mainText);
+      }
+      /************end nav & header********/
+
+      /*******start*******Home**************/
+      .Home {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-color: var(--bg);
+        background-attachment: fixed;
+      }
+      .Home.light {
+        background-color: #fff;
+      }
+
+      .Home h2 {
+        color: var(--mainText);
+        font-size: 2.3rem;
+        font-weight: 500;
+      }
+      .Home h2 span {
+        color: var(--special);
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 5rem;
+        font-weight: 600;
+      }
+
+      .Home h3 {
+        color: var(--text);
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      .btn {
+        font-size: 1.7rem;
+        color: var(--card);
+        text-decoration: none;
+        background-color: var(--special);
+        font-weight: 600;
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 15px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        transition: 0.5s ease;
+      }
+      .btn:hover {
+        transform: scale(1.1);
+        background-color: #a888f1;
+      }
+
+      /*********social icons****/
+
+      .social-icons a {
+        font-size: 2rem;
+        color: var(--mainText);
+        margin-right: 30px;
+        transition: 0.5s ease;
+        text-decoration: none;
+      }
+      .social-icons a.light {
+        color: #000;
+      }
+      .social-icons a:hover {
+          color: var(--special);
+          transform: scale(1.2);
+    }
+      
+      /*******end********Home***************/
+/************start*****about***************/
+.about-img {
+  width: 300px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+}
+.about-container p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--text);
+  display: inline-block;
+  margin-left: 10px;
+}
+/************end*****about***************/
+
+
+      /*******start****skills*********************/
+      .title {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--special);
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: var(--card);
+        width: 250px;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 50%);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 15px;
+        transition: 0.6s ease;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+      .icon {
+        color: var(--special);
+        font-size: 6rem;
+        text-align: center;
+      }
+      .info {
+        text-align: center;
+      }
+      .info h3 {
+        color: var(--special);
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 10px;
+      }
+      .info p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--mainText);
+      }
+      /*********end****skills**********************/
+      /********start*******projects**************/
+      .Projects {
+        background-color: #222240;
+      }
+
+      .Projects .container {
+        margin-top: 30px;
+      }
+      
+      .project-card {
+        border: 2px solid #fff;
+        width: 290px;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 10px;
+        min-height: 12rem;
+        overflow: hidden;
+        transition: 0.5s ease;
+      }
+      .project-card:hover {
+        transform: scale(1.1);
+      }
+
+      .project-card:hover .project-img {
+        opacity: 0.9;
+      }
+      .project-img {
+        width: 100%;
+      }
+      .project-info {
+        padding: 1rem;
+      }
+
+      .project-discreption {
+        font-size: 0.8rem;
+        color: var(--addtional);
+      }
+
+      .project-title {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      .project-btn {
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: var(--special);
+        transition: 0.3s ease;
+      }
+
+      .project-btn:hover {
+        color: purple;
+      }
+      /********end*******projects**************/
+
+      /******footer********/
+      .web-footer {
+        background-color: #000016;
+        color: var(--mainText);
+        padding: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-title {
+        font-size: 1.4rem;
+        font-weight: 600;     
+      }
+
+      .footer-title span {
+        color: var(--special);
+      }
+
+      .web-footer .social-icons a {
+        font-size: 1.3rem;
+      }
+
+
+      @media (max-width:768px) {
+        body {
+          font-size: 5px;
+        }
+
+        header {
+          padding: 10px 20px;
+        }
+
+        section {
+          padding: 60px 20px;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+
+        .navigation ul a {
+          font-size: 0.9rem;
+        }
+
+        .navigation ul {
+          gap: 8px;
+        }
+
+        .about-container {
+          flex-direction: column;
+        }
+        .about-img {
+          width: 250px;
+          margin-top: 30px;
+        }
+
+        .about-container p {
+          font-size: 0.8rem;
+        }
+
+        .title {
+          font-size: 2.5rem
+        }
+
+        .card {
+          width: 180px;
+        }
+         .Home h2 {
+           font-size: 1rem;
+         }
+        .Home h2 span {
+          font-size: 2rem;
+        }
+        .Home h3 {
+          font-size: 1rem;
+        }
+        .btn {
+          font-size: 0.8rem;
+        }
+
+        .social-icons a {
+          font-size: 1.2rem;
+        }
+
+        .icon {
+          font-size: 4rem;
+        }
+        .info h3 {
+          font-size: 1rem;
+        }
+        .info p {
+          font-size: 0.7rem;
+        }
+
+        .web-footer .social-icons a {
+          font-size: 1rem;
+          margin-right: 10px;
+          
+        }
+
+        .footer-title {
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 476px) {
+        header {
+          padding: 6px 15px;
+        }
+
+        .logo {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">LEO</a>
+      <button class="theme"><i class="fa-solid fa-moon"></i></button>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+<!-----السيكشن الاول-->
+    <section class="Home" id="Home">
+      <div class="information">
+        <h2>Hello,I'm Leo<br /><span>Front-end dev</span></h2>
+        <h3>passionate about creating responsive and beautiful websites</h3>
+        <a href="#" class="btn">View my work</a>
+        <div class="social-icons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-----السيكشن التاني-->
+<section class="About" id="About">
+<h2 class="title">About</h2>
+<div class="about-container">
+    <p>Hi, I'm Ahmed 👋
+
+      I'm a passionate Front-End Developer who enjoys turning creative ideas into modern, responsive, and user-friendly websites.
+
+      I work with HTML, CSS, and JavaScript to build interactive web experiences, and I'm always looking for opportunities to improve my skills and learn new technologies.
+
+      I believe that every project is a chance to learn something new, solve problems, and grow as a developer. My goal is to become a professional developer, work on exciting projects, and eventually build my own software company.
+
+      I'm not just learning to code; I'm building my future, one project at a time
+    </p>
+    
+    <img src="https://cdn.dbimg.app/Vg7uJnOo.png" alt="about-img" class="about-img"/>
+</div>
+</section>
+
+    <!----السيكشن  التالت-->
+    <section class="Skills" id="Skills">
+      <h2 class="title">Skills</h2>
+      <div class="container">
+        <!--first card-->
+        <div class="card">
+          <div class="icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="info">
+            <h3>Html</h3>
+            <p>Builds well-structured web pages using semantic HTML elements and organized content</p>
+          </div>
+        </div>
+        <!---second card-->
+        <div class="card">
+          <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+
+          <div class="info">
+            <h3>Css</h3>
+
+            <p>Creates attractive, responsive layouts with modern styling, Flexbox, Grid, and animations</p>
+          </div>
+        </div>
+        <!--third card-->
+        <div class="card">
+          <div class="icon">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div class="info">
+            <h3>JavaScript</h3>
+            <p>Adds interactivity to websites using functions, arrays, objects, events, and DOM manipulation</p>
+          </div>
+        </div>
+        <!------4 card------>
+        <div class="card">
+          <div class="icon">
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <div class="info">
+            <h3>Github</h3>
+            <p>Stores and manages code repositories, tracks project updates, and publishes websites using GitHub Pages</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------- السيكشن الرااابع-->
+    <section class="Projects" id="Projects">
+      <h2 class="title">Projects</h2>
+      <div class="container">
+       
+        <div class="project-card">
+            <div>
+              <img src="project1.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">Unresponsive portfolio</p>
+              <div class="project-title">
+              <span>portfolio</span>
+              <a href="https://ahmedtopone111-hash.github.io/Myportfolio/" class="project-btn">view project</a>
+            </div>
+            </div>
+          
+            </div>
+        
+        <div class="project-card">
+            <div>
+              <img src="project2.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">An empty responsive page</p>
+              <div class="project-title">
+              <span>Empty page</span>
+              <a href="https://ahmedtopone111-hash.github.io/Project-one/" class="project-btn">view project</a>
+            </div>
+            </div>
+        </div>
+           <div class="project-card">
+            <div>
+              <img src="project3.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">Incomplete portfolio</p>
+              <div class="project-title">
+              <span>portfolio</span>
+              <a href="https://ahmedtopone111-hash.github.io/Portfolio1/" class="project-btn">view project</a>
+            </div>
+            </div>
+           </div>
+
+              <div class="project-card">
+            <div>
+              <img src="https://cdn.dbimg.app/zWEijqoe.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">my first project in life</p>
+              <div class="project-title">
+              <span>project-one</span>
+              <a href="Projects" class="project-btn">view project</a>
+            </div>
+            </div>
+              </div>
+
+                 <div class="project-card">
+            <div>
+              <img src="https://cdn.dbimg.app/zWEijqoe.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">my first project in life</p>
+              <div class="project-title">
+              <span>project-one</span>
+              <a href="Projects" class="project-btn">view project</a>
+            </div>
+            </div>
+                 </div>
+
+                    <div class="project-card">
+            <div>
+              <img src="https://cdn.dbimg.app/zWEijqoe.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">my first project in life</p>
+              <div class="project-title">
+              <span>project-one</span>
+              <a href="Projects" class="project-btn">view project</a>
+            </div>
+            </div>
+               </div>
+                       <div class="project-card">
+            <div>
+              <img src="https://cdn.dbimg.app/zWEijqoe.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">my first project in life</p>
+              <div class="project-title">
+              <span>project-one</span>
+              <a href="Projects" class="project-btn">view project</a>
+            </div>
+            </div>
+             </div>
+                         
+                          <div class="project-card">
+            <div>
+              <img src="https://cdn.dbimg.app/zWEijqoe.jpg" alt="project1-img" class="project-img">
+            </div>
+            <div class="project-info">
+              <p class="project-discreption">my first project in life</p>
+              <div class="project-title">
+              <span>project-one</span>
+              <a href="Projects" class="project-btn">view project</a>
+            </div>
+            </div>
+            </div>
+    </section>
+    <footer class="web-footer">
+      <p class="footer-title">© 2026  All Rights Reserved. <span>Leo</span></p>
+      <div class="social-icons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+      </div>
+    </footer>
+    <script>
+      const ThemeButton = document.querySelector('.theme')
+
+      ThemeButton.addEventListener("click", function() {
+        document.querySelector('.Home').classList.toggle("light")
+        document.querySelectorAll('.social-icons a ').forEach(function(icon) { icon.classList.toggle("light");
+      });
+      });
+    </script>
+  </body>
+</html>
