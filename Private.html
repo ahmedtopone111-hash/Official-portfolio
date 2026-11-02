@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Message | Ahmed</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f4f3ff;
+      background:
+        radial-gradient(circle at 10% 20%, #5422a5 0, transparent 25%),
+        radial-gradient(circle at 90% 80%, #35136f 0, transparent 30%),
+        #090817;
+    }
+
+    .message {
+      width: 100%;
+      max-width: 750px;
+      padding: 45px 35px;
+      text-align: center;
+      background: rgba(34, 34, 64, 0.45);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      border-radius: 25px;
+      box-shadow:
+        0 0 30px rgba(139, 92, 246, 0.2),
+        inset 0 0 25px rgba(139, 92, 246, 0.05);
+      backdrop-filter: blur(15px);
+      animation: appear 1s ease;
+    }
+
+    .message h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: #a78bfa;
+      margin-bottom: 25px;
+    }
+
+    .message h1 span {
+      color: #fff;
+    }
+
+    .message p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #c7c4dd;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #a78bfa;
+      font-weight: 700;
+    }
+
+    .divider {
+      width: 70%;
+      height: 2px;
+      margin: 30px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        #8b5cf6,
+        transparent
+      );
+    }
+
+    .email-title {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .email {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 1px solid #8b5cf6;
+      border-radius: 12px;
+      color: #c4b5fd;
+      font-size: clamp(0.85rem, 3vw, 1.1rem);
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s ease;
+      overflow-wrap: anywhere;
+      max-width: 100%;
+    }
+
+    .email:hover {
+      background: #8b5cf6;
+      color: #fff;
+      box-shadow: 0 0 25px #8b5cf6;
+      transform: translateY(-4px);
+    }
+
+    .thanks {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #aaa9c5;
+    }
+
+    .signature {
+      display: block;
+      margin-top: 15px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #a78bfa;
+      letter-spacing: 3px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .message {
+        padding: 35px 20px;
+      }
+
+      .message p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="message">
+
+    <h1>A <span>Special Message</span> ✨</h1>
+
+    <p>
+      Hello there! 👋<br>
+      Thank you for visiting my website!
+    </p>
+
+    <p>
+      Please keep in mind that this is just an early version
+      of my work, and it may contain some bugs or imperfections.
+    </p>
+
+    <p>
+      If you have any <span class="highlight">suggestions</span>,
+      notice something that needs fixing, or would like to
+      contribute an idea, I'd be happy to hear from you!
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="email-title">
+      Feel free to contact me via email:
+    </div>
+
+    <a class="email"
+       href="mailto:ahmedtopone111@gmail.com">
+      ✉ ahmedtopone111@gmail.com
+    </a>
+
+    <div class="thanks">
+      Thank you for your time and support! ❤️
+    </div>
+
+    <span class="signature">— Ahmed —</span>
+
+  </main>
+
+</body>
+</html>
